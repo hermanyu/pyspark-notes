@@ -1,5 +1,4 @@
 # Set Up
----
 
 ## Summary
 
@@ -42,6 +41,9 @@ Further documentation can be found here <a href="https://docs.python.org/3/libra
 
 Note: this same process can be done with the GUI in Anaconda Navigator. Further documentation can be found here <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html"> Managing environments - conda </a>.
 
+This repo uses an `conda` environment for package managment. The exact state and package versions used in the environment is stored in the `environment.yml` file, which can be used to recreate the exact conda environment used in the repo. Do this by running the command:
+
+`conda env --name <name of your env> --file environment.yml --prune`
 
 <br>
 
@@ -83,4 +85,17 @@ Consequently, users of the Databricks Community Edition will either have to uplo
 
 <br>
 
+# Data Sets and Materials
 
+In order to do data science and machine learning, we need data sets to work on. Currently, the notebooks in the `notebooks` and `projects` section rely data sets provided in <a href="https://www.udemy.com/share/1013kq3@nLui0kwvGiCXm2CdzV9T21ZMNdVdkUDWdB9R2734wlR7yUpAVsodsMFJk-KJJVRxXA==/">Jose Portilla's PySpark course on Udemy</a>. This is a great course with fantastic lecture notes including an overview of how distributed computing, how to setup a Spark cluster compute, and general python basics. This notes in this repo focus primarily on the second half of the course regarding Spark dataframe operations and the MLlib library.
+
+In order to run the notebooks in this repo, you will need to a `course_materials` folder in project's root folder. It is generally good practice to not store data on a github repo, so the `.gitignore` file has been setup to prevent git from tracking the `course_materials` folder.
+
+The user may also wish to play around with their own data sets. It is recommended that the user creates a `data` folder in project's root folder and store their own data sets there.The `.gitignore` file has been setup to prevent tracking on the `data` folder as well. Future efforts will be made to migrate notebooks and notes to use publically available data sources from <a href="kaggle.com">Kaggle</a>, <a href="https://archive.ics.uci.edu/">The UC Irvine ML Repository</a>, and other potential sources. These data sets will be stored in the `data` folder.
+
+
+<br>
+
+---
+
+<br>
